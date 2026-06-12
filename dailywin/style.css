@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f0eefc;
+  min-height: 100vh;
+  color: #222;
+}
+
+#app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 0 80px;
+}
+
+header {
+  background: linear-gradient(135deg, #6c63ff, #9b59b6);
+  color: white;
+  padding: 28px 20px 20px;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 4px 20px rgba(108,99,255,0.3);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+#today-label {
+  margin-top: 4px;
+  opacity: 0.85;
+  font-size: 0.9rem;
+}
+
+#habits-section {
+  padding: 20px 16px 0;
+}
+
+#habits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.habit-card {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  transition: transform 0.1s, box-shadow 0.1s;
+  user-select: none;
+}
+
+.habit-card.done {
+  background: #f0fdf4;
+  border: 2px solid #86efac;
+}
+
+.habit-card:active {
+  transform: scale(0.98);
+}
+
+.check-btn {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  border: 2.5px solid #d1d5db;
+  background: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.habit-card.done .check-btn {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: white;
+}
+
+.habit-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.habit-name {
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.habit-streak {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+.habit-streak span {
+  color: #f97316;
+  font-weight: 700;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #d1d5db;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: color 0.2s;
+}
+
+.delete-btn:hover {
+  color: #ef4444;
+}
+
+#empty-msg {
+  text-align: center;
+  color: #aaa;
+  padding: 40px 0;
+  font-size: 0.95rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#add-section {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  padding: 12px 16px;
+  background: white;
+  border-top: 1px solid #eee;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+}
+
+#add-row {
+  display: flex;
+  gap: 8px;
+}
+
+#habit-input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#habit-input:focus {
+  border-color: #6c63ff;
+}
+
+#add-btn {
+  padding: 12px 18px;
+  background: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+#add-btn:active {
+  background: #574fd6;
+}
+
+footer {
+  text-align: center;
+  padding: 24px 0 8px;
+  color: #bbb;
+  font-size: 0.8rem;
+}

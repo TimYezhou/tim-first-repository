@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#6c63ff" />
+  <title>DailyWin</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>DailyWin</h1>
+      <p id="today-label"></p>
+    </header>
+
+    <section id="habits-section">
+      <div id="habits-list"></div>
+      <p id="empty-msg" class="hidden">No habits yet. Add one below!</p>
+    </section>
+
+    <section id="add-section">
+      <div id="add-row">
+        <input id="habit-input" type="text" placeholder="New habit (e.g. Drink water)" maxlength="40" />
+        <button id="add-btn" onclick="addHabit()">＋ Add</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>Keep the streak alive 🔥</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
